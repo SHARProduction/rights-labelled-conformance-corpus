@@ -1,0 +1,7 @@
+import test from'node:test';import assert from'node:assert/strict';import fs from'node:fs';import{queryCorpus,validateCorpus}from'../src/index.mjs';
+const corpus=()=>JSON.parse(fs.readFileSync(new URL('../data/corpus.json',import.meta.url)));
+test('rights-labelled synthetic corpus validates',()=>{const out=validateCorpus(corpus());assert.equal(out.valid,true);assert.equal(out.stats.synthetic,out.stats.total);assert.equal(out.stats.rightsLabelled,out.stats.total)});
+test('query combines text, stage, locale and rights filters',()=>{const rows=queryCorpus(corpus(),{text:'caption',stage:'delivery',locale:'en',rightsStatus:'cleared-synthetic'});assert.equal(rows.length,1);assert.equal(rows[0].id,'syn-delivery-caption-en')});
+test('query is deterministic and returns copies',()=>{const a=queryCorpus(corpus(),{stage:'preproduction'}),b=queryCorpus(corpus(),{stage:'preproduction'});assert.deepEqual(a,b);a[0].title='mutated';assert.notEqual(queryCorpus(corpus(),{stage:'preproduction'})[0].title,'mutated')});
+test('duplicate, missing rights and non-synthetic claims fail',()=>{const rows=corpus();rows.push({...rows[0]});rows[1].rights={};rows[2].synthetic=false;const out=validateCorpus(rows);for(const code of['DUPLICATE_ID','RIGHTS_LABEL','SYNTHETIC_REQUIRED'])assert.ok(out.errors.some(x=>x.code===code),code)});
+test('unknown filters fail closed',()=>assert.throws(()=>queryCorpus(corpus(),{owner:'someone'}),/UNKNOWN_FILTER/));
