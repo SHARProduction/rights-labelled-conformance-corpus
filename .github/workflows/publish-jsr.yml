@@ -1,8 +1,6 @@
 name: Publish JSR package
 on:
-  push:
-    branches: [main]
-    paths: ["src/**", "jsr.json", "package.json", "test/**", ".github/workflows/publish-jsr.yml"]
+  workflow_dispatch:
 permissions:
   contents: read
   id-token: write

@@ -1,7 +1,12 @@
 {
   "name": "@sharproduction/rights-labelled-conformance-corpus",
   "version": "0.1.0",
-  "exports": "./src/index.mjs",
+  "exports": {
+    ".": {
+      "default": "./src/index.mjs",
+      "types": "./src/index.d.ts"
+    }
+  },
   "license": "MIT",
   "homepage": "https://sharprod.com/",
   "description": "SHAR Production deterministic validator and query library for explicitly synthetic rights-labelled conformance records."
