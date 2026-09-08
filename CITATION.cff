@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this corpus, please cite it using the metadata below."
+type: dataset
+title: "Rights-labelled Synthetic Conformance Corpus and Explorer"
+version: 0.1.0
+date-released: 2026-09-06
+authors:
+  - name: "SHAR Production"
+url: "https://github.com/SHARProduction/rights-labelled-conformance-corpus"
+repository-code: "https://github.com/SHARProduction/rights-labelled-conformance-corpus"
+license: "CC-BY-4.0"
+abstract: "A small, explicitly synthetic reference corpus for deterministic checks of production-metadata structure and rights labels. It contains no client media, legal opinions, or production benchmarks."

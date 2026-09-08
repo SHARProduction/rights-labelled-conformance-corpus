@@ -1,0 +1,29 @@
+{
+  "profile": "data-package",
+  "name": "rights-labelled-synthetic-conformance-corpus",
+  "title": "Rights-labelled Synthetic Conformance Corpus",
+  "version": "0.1.0",
+  "description": "Six explicitly synthetic reference records for deterministic checks of production-metadata structure and rights labels. No client media, personal data, legal opinions, or production benchmarks are included.",
+  "licenses": [
+    {
+      "name": "CC-BY-4.0",
+      "path": "https://creativecommons.org/licenses/by/4.0/"
+    }
+  ],
+  "resources": [
+    {
+      "name": "corpus",
+      "path": "data/corpus.json",
+      "format": "json",
+      "mediatype": "application/json",
+      "profile": "data-resource"
+    }
+  ],
+  "contributors": [
+    {
+      "title": "SHAR Production",
+      "role": "author",
+      "path": "https://sharprod.com/"
+    }
+  ]
+}
