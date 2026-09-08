@@ -2,7 +2,7 @@ cff-version: 1.2.0
 message: "If you use this corpus, please cite it using the metadata below."
 type: dataset
 title: "Rights-labelled Synthetic Conformance Corpus and Explorer"
-version: 0.1.0
+version: 0.1.2
 date-released: 2026-09-06
 authors:
   - name: "SHAR Production"

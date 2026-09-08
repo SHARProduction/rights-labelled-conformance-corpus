@@ -1,6 +1,6 @@
 {
   "name": "@sharproduction/rights-labelled-conformance-corpus",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "exports": "./src/index.mjs",
   "license": "MIT",
   "homepage": "https://sharprod.com/",

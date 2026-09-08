@@ -2,7 +2,7 @@
   "profile": "data-package",
   "name": "rights-labelled-synthetic-conformance-corpus",
   "title": "Rights-labelled Synthetic Conformance Corpus",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Six explicitly synthetic reference records for deterministic checks of production-metadata structure and rights labels. No client media, personal data, legal opinions, or production benchmarks are included.",
   "licenses": [
     {
